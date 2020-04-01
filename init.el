@@ -68,6 +68,7 @@
     (setq default-frame-alist '( (tool-bar-lines . 0)))))
 
 ;;(rc/require-theme 'gruber-darker)
+(setq visible-bell t)
 
 ;; Whitespace mode
 (defun rc/set-up-whitespace-handling ()
