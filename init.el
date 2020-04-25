@@ -27,15 +27,15 @@
 (setq evil-replace-state-cursor '("red" bar))
 (setq evil-operator-state-cursor '("red" hollow))
 
-;; display-line-numbers-mode
-(when (version<= "26.0.50" emacs-version)
-  (global-display-line-numbers-mode))
-
 ;; appearance
 (defun rc/get-default-font ()
   (cond
   ((eq system-type 'windows-nt) "Consolas-12")
   ((eq system-type 'gnu/linux) "Ubuntu Mono-12")))
+
+;; display-line-numbers-mode
+(when (version<= "26.0.50" emacs-version)
+  (global-display-line-numbers-mode))
 
 (add-to-list 'default-frame-alist `(font . ,(rc/get-default-font)))
 
@@ -75,6 +75,9 @@
   (interactive)
   (whitespace-mode 1)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
+
+;; Javascript
+(setq js-indent-level 2)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
